@@ -1,0 +1,50 @@
+class Vehicle {
+    String regNo;
+    String vehicleType;
+    int entryHour;
+
+    Vehicle(String regNo, String vehicleType, int entryHour) {
+        this.regNo = regNo;
+        this.vehicleType = vehicleType;
+        this.entryHour = entryHour;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Vehicle[] vehicles = {
+            new Vehicle("TN01AB1234", "Car", 9),
+            new Vehicle("TN02CD5678", "Bike", 10),
+            new Vehicle("TN03EF9012", "EV", 11)
+        };
+
+        String searchRegNo = "TN02CD5678";
+        boolean found = false;
+        int comparisons = 0;
+        long startTime = System.nanoTime();
+
+        for (Vehicle v : vehicles) {
+            comparisons++;
+            if (v.regNo.equals(searchRegNo)) {
+                System.out.println("Vehicle Found");
+                System.out.println("Registration: " + v.regNo);
+                System.out.println("Type: " + v.vehicleType);
+                System.out.println("Entry Hour: " + v.entryHour);
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Vehicle Not Found");
+        }
+
+        long searchTime = System.nanoTime() - startTime;
+        System.out.println("Records checked: " + vehicles.length);
+        System.out.println("Comparisons: " + comparisons);
+        System.out.println("Search time (ns): " + searchTime);
+        System.out.println("Storage: 3 Vehicle objects");
+        System.out.println("Space: 3 objects, each with 3 fields");
+    }
+}

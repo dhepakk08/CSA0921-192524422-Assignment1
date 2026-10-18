@@ -1,0 +1,36 @@
+public class Main {
+    public static void main(String[] args) {
+
+        String[] regNo = {"TN01AB1234", "TN02CD5678", "TN03EF9012"};
+        String[] vehicleType = {"Car", "Bike", "EV"};
+        int[] entryHour = {9, 10, 11};
+
+        String searchRegNo = "TN02CD5678";
+        boolean found = false;
+        int comparisons = 0;
+        long startTime = System.nanoTime();
+
+        for (int i = 0; i < regNo.length; i++) {
+            comparisons++;
+            if (regNo[i].equals(searchRegNo)) {
+                System.out.println("Vehicle Found");
+                System.out.println("Registration: " + regNo[i]);
+                System.out.println("Type: " + vehicleType[i]);
+                System.out.println("Entry Hour: " + entryHour[i]);
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Vehicle Not Found");
+        }
+
+        long searchTime = System.nanoTime() - startTime;
+        System.out.println("Records checked: " + regNo.length);
+        System.out.println("Comparisons: " + comparisons);
+        System.out.println("Search time (ns): " + searchTime);
+        System.out.println("Storage: 3 parallel arrays");
+        System.out.println("Space: 3 arrays for 3 vehicle fields");
+    }
+}
