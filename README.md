@@ -51,7 +51,11 @@ Task 4: Design classes, objects and constructors
 Task 5: Apply static members and object life cycle
 Task 6: Design the Inheritance Hierarchy
 Task 7: Override and Specialise Behaviour
-Task 8 – Apply Polymorphism
+Task 8: Apply Polymorphism
+Task 9: Introduce Abstraction
+Task 10: Encapsulation through Packages and Access Modifiers
+Task 11: Implement, Test and Defend the Design
+Task 12: Re-evaluate and Adapt the Design 
 
 5. Technologies
 
