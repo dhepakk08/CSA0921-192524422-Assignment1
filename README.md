@@ -46,7 +46,11 @@ Each task folder should contain the Java source code and required output evidenc
 
 Task 1: Understand the Problem and Identify the Objects.
 Task 2: Choose the Data Representation.
-Tasks 3–12: To be updated according to the assignment instructions.
+Task 3: Design the control logic
+Task 4: Design classes, objects and constructors
+Task 5: Apply static members and object life cycle
+Task 6: Design the Inheritance Hierarchy
+Task 7: Override and Specialise Behaviour
 
 5. Technologies
 
